@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Call Test URL
         run: |
-          curl "https://avisaexperts.com/schedulecron/check_schedulenoticheck.php"
+          curl "https://avisaexperts.com/schedulecron/check.php"
