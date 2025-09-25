@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Call Test URL
         run: |
-          curl "https://avisaexperts.com/schedulecron/check.php"
+          curl "192.168.1.10/scheduler_cronjob/check.php"
