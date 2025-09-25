@@ -2,8 +2,8 @@ name: Test AvisaExperts Cron
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Every 10 minutes
-  workflow_dispatch:  # Manual trigger
+    - cron: '*/10 * * * *'  # Every 10 minutes
+  workflow_dispatch:        # Allow manual trigger
 
 jobs:
   test:
@@ -11,4 +11,6 @@ jobs:
     steps:
       - name: Call Test URL
         run: |
-          curl "https://avisaexperts.com/schedulecron/check.php"
+          echo "🚀 Triggering PHP file..."
+          curl -s "https://avisaexperts.com/schedulecron/check.php"
+          echo "✅ Request sent successfully"
